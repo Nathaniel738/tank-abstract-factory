@@ -1,7 +1,5 @@
-from model.tank import Tank
+import abc
 
 
-class RussianTank(Tank):
-    def __init__(self) -> None:
-        super().__init__()
-        print('RussianTank')
+class RussianTank(metaclass=abc.ABCMeta):
+    pass

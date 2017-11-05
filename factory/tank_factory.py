@@ -1,12 +1,15 @@
-from model.tank import Tank
+import abc
 
 
-class TankFactory:
+class TankFactory(metaclass=abc.ABCMeta):
+    @abc.abstractmethod
     def create_light_tank(self):
-        return Tank()
+        pass
 
+    @abc.abstractmethod
     def create_middle_tank(self):
-        return Tank()
+        pass
 
+    @abc.abstractmethod
     def create_heavy_tank(self):
-        return Tank()
+        pass
